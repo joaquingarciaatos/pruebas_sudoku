@@ -1,0 +1,76 @@
+
+div.maingrid {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: 288px 288px 288px;
+  grid-template-rows: 288px 288px 288px;
+  grid-gap: 0px;
+}
+
+div.subgrid {
+  margin: 0;
+  border: 2pt solid black;
+  padding: 0;
+  display:grid;
+  grid-template-columns: 94px 94px 94px;
+  grid-template-rows: 94px 94px 94px;
+  grid-gap: 0px;
+}
+
+div.selector {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: 31px 31px 31px;
+  grid-template-rows: 31px 31px 31px;
+  grid-gap: 0px;
+  position:absolute;
+  width: 93px;
+  height: 93px;
+}
+
+div.cell, div.item {
+  border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+div.selector div.item {
+  width: 19px; /* 31 - 10 -2 */
+  height: 19px;
+  padding: 5px;
+}
+
+div.statusbar {
+  width: 860px;
+  height: 50px;
+  padding: 2px;
+  margin: 20px 0px;
+  border: 1px solid black;
+  display: block;
+}
+
+div.item {
+  background-color: lightgray;
+}
+
+div.active {
+  background-color: green;
+}
+
+span.solution {
+  color: white;
+  background-color: blue;
+}
+span.problem {
+  color: red;
+}

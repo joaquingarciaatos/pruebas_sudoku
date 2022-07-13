@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sudoku Designer AI4EU Experiments Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="gui.js"></script>
+    <link rel="stylesheet" href="gui.css" />
+  </head>
+
+  <body>
+    <h1>Sudoku Designer AI4EU Experiments Demo</h1>
+
+    <div class="statusbar"><span id="status"></span><br/><span id="serverstatus"></span></div>
+    <div class="maingrid">
+      {% for Y in [0,1,2] %}
+        {% for X in [0,1,2] %}
+          <div class="subgrid">
+            {% for y in [1,2,3] %}
+              {% for x in [1,2,3] %}
+                <div class="cell" id="{{X*3+x}}_{{Y*3+y}}">
+                  <span class="user">?</span>
+                  <span class="solution"></span>
+                  <span class="problem"></span>
+                </div>
+              {% endfor %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="selector">
+      {% for digit in [1,2,3,4,5,6,7,8,9] %}
+        <div class="item" id="{{digit}}">{{digit}}</div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
